@@ -1,0 +1,24 @@
+plugins {
+    id 'org.springframework.boot' version '2.1.6.RELEASE'
+    id 'java'
+}
+
+apply plugin: 'io.spring.dependency-management'
+
+group = 'me.kay'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile "org.springframework.boot:spring-boot-starter-web"
+    implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    // https://mvnrepository.com/artifact/com.github.briandilley.jsonrpc4j/jsonrpc4j
+    compile group: 'com.github.briandilley.jsonrpc4j', name: 'jsonrpc4j', version: '1.5.0'
+    compile "org.projectlombok:lombok:1.16.20"
+}
